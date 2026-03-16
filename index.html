@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>माझी साजूक तुपातली पुरणपोळी 🥺</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ========== PAGE 1 ========== -->
+  <section id="page1" class="page active">
+    <div class="hearts-container" id="heartsContainer1"></div>
+
+    <div class="page1-content">
+      <div class="petal-ring"></div>
+
+      <div class="envelope-icon">💌</div>
+
+      <h1 class="title-marathi">माझी साजूक तुपातली<br/>पुरणपोळी <span class="emoji-wobble">🥺</span></h1>
+
+      <div class="divider-line">
+        <span class="divider-heart">❤️</span>
+      </div>
+
+      <p class="subtext">
+        I'm really sorry for what I did.<br/>
+        <span class="marathi-sub">माझ्याकडून चूक झाली…</span><br/>
+        तू माझ्यासाठी खूप <em>special</em> आहेस.
+      </p>
+
+      <button class="cta-btn" id="chanceBtn" onclick="goToPage2()">
+        <span class="btn-text">एक chance देशील?</span>
+        <span class="btn-icon">🌸</span>
+      </button>
+
+      <p class="small-hint">( तुझ्यासाठी एक message आहे... )</p>
+    </div>
+
+    <!-- Decorative petals -->
+    <div class="petal p1">🌸</div>
+    <div class="petal p2">🌷</div>
+    <div class="petal p3">🌺</div>
+    <div class="petal p4">🌸</div>
+  </section>
+
+  <!-- ========== PAGE 2 ========== -->
+  <section id="page2" class="page">
+    <div class="hearts-container" id="heartsContainer2"></div>
+
+    <div class="page2-content">
+
+      <!-- Back Button -->
+      <button class="back-btn" onclick="goToPage1()">← परत</button>
+
+      <!-- Header -->
+      <div class="page2-header">
+        <div class="sorry-badge">🙏</div>
+        <h2 class="page2-title">माझी माफी</h2>
+        <p class="page2-subtitle">From the bottom of my heart…</p>
+      </div>
+
+      <!-- Section 1: Apology Message -->
+      <div class="card card-apology">
+        <div class="card-icon">💔</div>
+        <h3 class="card-heading">माझं मन…</h3>
+        <p class="apology-text" id="apologyTyping"></p>
+        <span class="cursor" id="typingCursor">|</span>
+      </div>
+
+      <!-- Section 2: What I Realized -->
+      <div class="card card-realized">
+        <div class="card-icon">🪞</div>
+        <h3 class="card-heading">मला समजलं…</h3>
+        <ul class="realized-list">
+          <li class="list-item" data-delay="0">
+            <span class="list-icon">💧</span>
+            I realized I hurt you — and I hate myself for it.
+          </li>
+          <li class="list-item" data-delay="150">
+            <span class="list-icon">👂</span>
+            I should have listened better, with patience and love.
+          </li>
+          <li class="list-item" data-delay="300">
+            <span class="list-icon">🫶</span>
+            Your feelings matter to me — more than anything else.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 3: Promises -->
+      <div class="card card-promises">
+        <div class="card-icon">🕊️</div>
+        <h3 class="card-heading">माझी Promise…</h3>
+        <ul class="promise-list">
+          <li class="promise-item" data-delay="0">
+            <span class="promise-check">✦</span>
+            <div>
+              <strong>मी तुझं ऐकेन</strong>
+              <span> — always, without interruption.</span>
+            </div>
+          </li>
+          <li class="promise-item" data-delay="150">
+            <span class="promise-check">✦</span>
+            <div>
+              <strong>तुझ्या feelings ला respect करेन</strong>
+              <span> — every single time.</span>
+            </div>
+          </li>
+          <li class="promise-item" data-delay="300">
+            <span class="promise-check">✦</span>
+            <div>
+              <strong>ही चूक कधीच repeat करणार नाही</strong>
+              <span> — I promise on us.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Forgive Button -->
+      <div class="forgive-section">
+        <p class="forgive-ask">तुझ्याशिवाय मी अपूर्ण आहे… 🥺</p>
+        <button class="forgive-btn" id="forgiveBtn" onclick="showForgivePopup()">
+          मला माफ करशील? 💕
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== POPUP ========== -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box" id="popupBox">
+      <div class="popup-hearts" id="popupHearts"></div>
+      <div class="popup-emoji">🥰</div>
+      <h2 class="popup-title">Thank you! 💖</h2>
+      <p class="popup-message">Thank you for giving me a chance.</p>
+      <p class="popup-love">I love you. <span class="heart-beat">❤️</span></p>
+      <button class="popup-close" onclick="closePopup()">( Close )</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
